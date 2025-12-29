@@ -1,0 +1,15 @@
+{
+  "model_name": "TernakCare_MobileNetV2",
+  "input_shape": [
+    224,
+    224,
+    3
+  ],
+  "num_classes": 3,
+  "class_names": [
+    "foot-and-mouth",
+    "healthy",
+    "lumpy"
+  ],
+  "preprocessing": "rescale_1_255"
+}
