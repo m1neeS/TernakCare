@@ -54,7 +54,7 @@ pip install tensorflow matplotlib seaborn scikit-learn pillow
 
 1. Clone repository
 ```bash
-git clone https://github.com/yourusername/ternakcare.git
+git clone https://github.com/m1nees/ternakcare.git
 cd ternakcare
 ```
 
