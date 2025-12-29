@@ -71,29 +71,6 @@ data/
 jupyter notebook TernakCare_Disease_Detection.ipynb
 ```
 
-### Inference
-
-```python
-from tensorflow import keras
-import numpy as np
-from tensorflow.keras.preprocessing import image
-
-# Load model
-model = keras.models.load_model('ternakcare_best_model.keras')
-class_names = ['foot-and-mouth', 'healthy', 'lumpy']
-
-# Predict
-img = image.load_img('path/to/image.jpg', target_size=(224, 224))
-img_array = image.img_to_array(img) / 255.0
-img_array = np.expand_dims(img_array, axis=0)
-
-predictions = model.predict(img_array)
-predicted_class = class_names[np.argmax(predictions[0])]
-confidence = np.max(predictions[0]) * 100
-
-print(f"Prediction: {predicted_class} ({confidence:.2f}%)")
-```
-
 ## 📁 Project Structure
 
 ```
@@ -143,14 +120,3 @@ tflite_model = converter.convert()
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👨‍💻 Author
-
-**TernakCare Team**
-
----
-
-⭐ Star this repo if you find it helpful!
